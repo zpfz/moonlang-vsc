@@ -3,6 +3,7 @@
     "displayName": "MoonLang",
     "description": "MoonLang language support - syntax highlighting, code completion, formatting, format on save, and more",
     "version": "1.9.1",
+    "publisher": "zpfz",
     "author": {
         "name": "GreenTeng",
         "url": "https://moon-lang.com"
