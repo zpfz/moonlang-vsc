@@ -1,0 +1,293 @@
+{
+    "Function": {
+        "prefix": ["fn", "function", "func"],
+        "body": [
+            "function ${1:name}(${2:params}):",
+            "\t${3:# code}",
+            "end"
+        ],
+        "description": "Define a function (: end style)"
+    },
+    "Function Brace": {
+        "prefix": ["fnb", "functionb", "funcb"],
+        "body": [
+            "function ${1:name}(${2:params}) {",
+            "\t${3:# code}",
+            "}"
+        ],
+        "description": "Define a function ({ } style)"
+    },
+    "Class": {
+        "prefix": ["class", "cls"],
+        "body": [
+            "class ${1:ClassName}:",
+            "\tfunction init(${2:params}):",
+            "\t\t${3:self.value = value}",
+            "\tend",
+            "end"
+        ],
+        "description": "Define a class (: end style)"
+    },
+    "Class Brace": {
+        "prefix": ["classb", "clsb"],
+        "body": [
+            "class ${1:ClassName} {",
+            "\tfunction init(${2:params}) {",
+            "\t\t${3:self.value = value}",
+            "\t}",
+            "}"
+        ],
+        "description": "Define a class ({ } style)"
+    },
+    "Class with Inheritance": {
+        "prefix": ["classext", "extend"],
+        "body": [
+            "class ${1:ClassName} extends ${2:ParentClass}:",
+            "\tfunction init(${3:params}):",
+            "\t\tsuper.init(${4:args})",
+            "\t\t${5:# code}",
+            "\tend",
+            "end"
+        ],
+        "description": "Define a class with inheritance (: end style)"
+    },
+    "Class with Inheritance Brace": {
+        "prefix": ["classextb", "extendb"],
+        "body": [
+            "class ${1:ClassName} extends ${2:ParentClass} {",
+            "\tfunction init(${3:params}) {",
+            "\t\tsuper.init(${4:args})",
+            "\t\t${5:# code}",
+            "\t}",
+            "}"
+        ],
+        "description": "Define a class with inheritance ({ } style)"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:# code}",
+            "end"
+        ],
+        "description": "If statement (: end style)"
+    },
+    "If Statement Brace": {
+        "prefix": "ifb",
+        "body": [
+            "if ${1:condition} {",
+            "\t${2:# code}",
+            "}"
+        ],
+        "description": "If statement ({ } style)"
+    },
+    "If-Else": {
+        "prefix": "ife",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:# code}",
+            "else:",
+            "\t${3:# code}",
+            "end"
+        ],
+        "description": "If-else statement (: end style)"
+    },
+    "If-Else Brace": {
+        "prefix": "ifeb",
+        "body": [
+            "if ${1:condition} {",
+            "\t${2:# code}",
+            "} else {",
+            "\t${3:# code}",
+            "}"
+        ],
+        "description": "If-else statement ({ } style)"
+    },
+    "If-Elif-Else": {
+        "prefix": "ifee",
+        "body": [
+            "if ${1:condition}:",
+            "\t${2:# code}",
+            "elif ${3:condition}:",
+            "\t${4:# code}",
+            "else:",
+            "\t${5:# code}",
+            "end"
+        ],
+        "description": "If-elif-else statement (: end style)"
+    },
+    "If-Elif-Else Brace": {
+        "prefix": "ifeeb",
+        "body": [
+            "if ${1:condition} {",
+            "\t${2:# code}",
+            "} elif ${3:condition} {",
+            "\t${4:# code}",
+            "} else {",
+            "\t${5:# code}",
+            "}"
+        ],
+        "description": "If-elif-else statement ({ } style)"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for ${1:item} in ${2:collection}:",
+            "\t${3:# code}",
+            "end"
+        ],
+        "description": "For loop (: end style)"
+    },
+    "For Loop Brace": {
+        "prefix": "forb",
+        "body": [
+            "for ${1:item} in ${2:collection} {",
+            "\t${3:# code}",
+            "}"
+        ],
+        "description": "For loop ({ } style)"
+    },
+    "For Range": {
+        "prefix": "forr",
+        "body": [
+            "for ${1:i} in range(${2:start}, ${3:end}):",
+            "\t${4:# code}",
+            "end"
+        ],
+        "description": "For loop with range (: end style)"
+    },
+    "For Range Brace": {
+        "prefix": "forrb",
+        "body": [
+            "for ${1:i} in range(${2:start}, ${3:end}) {",
+            "\t${4:# code}",
+            "}"
+        ],
+        "description": "For loop with range ({ } style)"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while ${1:condition}:",
+            "\t${2:# code}",
+            "end"
+        ],
+        "description": "While loop (: end style)"
+    },
+    "While Loop Brace": {
+        "prefix": "whileb",
+        "body": [
+            "while ${1:condition} {",
+            "\t${2:# code}",
+            "}"
+        ],
+        "description": "While loop ({ } style)"
+    },
+    "Try-Catch": {
+        "prefix": ["try", "trycatch"],
+        "body": [
+            "try:",
+            "\t${1:# code}",
+            "catch ${2:e}:",
+            "\t${3:print(e)}",
+            "end"
+        ],
+        "description": "Try-catch block (: end style)"
+    },
+    "Try-Catch Brace": {
+        "prefix": ["tryb", "trycatchb"],
+        "body": [
+            "try {",
+            "\t${1:# code}",
+            "} catch ${2:e} {",
+            "\t${3:print(e)}",
+            "}"
+        ],
+        "description": "Try-catch block ({ } style)"
+    },
+    "Lambda": {
+        "prefix": ["lambda", "=>"],
+        "body": "(${1:x}) => ${2:x * 2}",
+        "description": "Lambda expression"
+    },
+    "Lambda Multi-param": {
+        "prefix": "lambdam",
+        "body": "(${1:a}, ${2:b}) => ${3:a + b}",
+        "description": "Lambda with multiple parameters"
+    },
+    "Map": {
+        "prefix": "map",
+        "body": "map((${1:x}) => ${2:x * 2}, ${3:list})",
+        "description": "Map function"
+    },
+    "Filter": {
+        "prefix": "filter",
+        "body": "filter((${1:x}) => ${2:x > 0}, ${3:list})",
+        "description": "Filter function"
+    },
+    "Reduce": {
+        "prefix": "reduce",
+        "body": "reduce((${1:acc}, ${2:x}) => ${3:acc + x}, ${4:list}, ${5:0})",
+        "description": "Reduce function"
+    },
+    "Print": {
+        "prefix": "pr",
+        "body": "print(${1:value})",
+        "description": "Print statement"
+    },
+    "GUI Window": {
+        "prefix": "guiwin",
+        "body": [
+            "win = new Window(\"${1:Title}\", ${2:800}, ${3:600})",
+            "win.load_html(\"\"\"",
+            "<!DOCTYPE html>",
+            "<html>",
+            "<body>",
+            "\t<h1>${4:Hello}</h1>",
+            "</body>",
+            "</html>",
+            "\"\"\")",
+            "win.run()"
+        ],
+        "description": "Create GUI window"
+    },
+    "HTTP Server": {
+        "prefix": "httpserver",
+        "body": [
+            "server = new HttpServer(${1:8080})",
+            "",
+            "function handle_index(req, res):",
+            "\tres.html(\"<h1>Hello World</h1>\")",
+            "end",
+            "",
+            "server.get(\"/\", handle_index)",
+            "server.start()"
+        ],
+        "description": "Create HTTP server"
+    },
+    "Import": {
+        "prefix": "imp",
+        "body": "from \"${1:module}\" import ${2:*}",
+        "description": "Import statement"
+    },
+    "Main Check": {
+        "prefix": "main",
+        "body": [
+            "function main():",
+            "\t${1:# code}",
+            "end",
+            "",
+            "main()"
+        ],
+        "description": "Main function pattern"
+    },
+    "Closure/makeAdder": {
+        "prefix": "closure",
+        "body": [
+            "function ${1:makeAdder}(${2:n}):",
+            "\treturn (${3:x}) => ${3:x} + ${2:n}",
+            "end"
+        ],
+        "description": "Closure factory pattern"
+    }
+}

@@ -1,0 +1,177 @@
+{
+    "name": "moonlang-vsc",
+    "displayName": "MoonLang",
+    "description": "MoonLang language support - syntax highlighting, code completion, formatting, format on save, and more",
+    "version": "1.9.1",
+    "author": {
+        "name": "GreenTeng",
+        "url": "https://moon-lang.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zpfz/moonlang-vsc"
+    },
+    "homepage": "https://github.com/zpfz/moonlang-vsc",
+    "icon": "images/moonlang-icon.png",
+    "main": "./extension.js",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "activationEvents": [
+        "onLanguage:moonlang"
+    ],
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Formatters"
+    ],
+    "keywords": [
+        "moonlang",
+        "moon",
+        "scripting",
+        "embedded",
+        "gui",
+        "intellisense"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "moonlang",
+                "aliases": [
+                    "MoonLang",
+                    "moonlang",
+                    "Moon"
+                ],
+                "extensions": [
+                    ".moon",
+                    ".mn"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./images/moonlang-icon.png",
+                    "dark": "./images/moonlang-icon.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "moonlang",
+                "scopeName": "source.moonlang",
+                "path": "./syntaxes/moonlang.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "moonlang",
+                "path": "./snippets/moonlang.json"
+            }
+        ],
+        "iconThemes": [
+            {
+                "id": "moonlang-icons",
+                "label": "MoonLang File Icons",
+                "path": "./icons/moonlang-file-icon-theme.json"
+            }
+        ],
+        "configuration": {
+            "title": "MoonLang",
+            "properties": {
+                "moonlang.formatOnSave": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "自动在保存时格式化 MoonLang 代码 / Format MoonLang code on save"
+                },
+                "moonlang.tabSize": {
+                    "type": "number",
+                    "default": 4,
+                    "description": "缩进空格数 / Number of spaces for indentation"
+                },
+                "moonlang.insertSpaces": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "使用空格缩进 (false 使用 Tab) / Use spaces for indentation (false uses tabs)"
+                }
+            }
+        },
+        "commands": [
+			{
+				"command": "run.MoonLang",
+				"title": "运行 MoonLang 文件",
+				"icon": {
+					"dark": "./images/dark.svg",
+                    "light": "./images/light.svg"
+				}
+			},
+            {
+				"command": "generate.MoonLang",
+				"title": "生成 exe 可运行文件",
+				"icon": {
+					"dark": "./images/dark.svg",
+                    "light": "./images/light.svg"
+				}
+			}
+		],
+		"menus": {
+			"editor/title/run": [
+            {
+					"when": "resourceExtname == .moon",
+					"command": "run.MoonLang",
+					"group": "moonlang@0"
+				},
+                {
+					"when": "resourceExtname == .moon",
+					"command": "generate.MoonLang",
+					"group": "moonlang@1"
+				}				
+			],
+			"editor/context": [
+				{
+					"when": "resourceExtname == .moon",
+					"command": "run.MoonLang",
+					"group": "moonlang"
+				},
+                {
+					"when": "resourceExtname == .moon",
+					"command": "generate.MoonLang",
+					"group": "moonlang"
+				}
+			],
+			"editor/title/context": [
+				{
+					"when": "resourceExtname == .moon",
+					"command": "run.MoonLang",
+					"group": "moonlang"
+				},
+                {
+					"when": "resourceExtname == .moon",
+					"command": "generate.MoonLang",
+					"group": "moonlang"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceExtname == .moon",
+					"command": "run.MoonLang",
+					"group": "moonlang"
+				},
+                {
+					"when": "resourceExtname == .moon",
+					"command": "generate.MoonLang",
+					"group": "moonlang"
+				}
+			]
+		},
+        "keybindings": [{
+        "command": "run.MoonLang",
+        "key": "ctrl+r",
+        "mac": "cmd+r",
+        "when": "editorTextFocus"
+    },{
+        "command": "generate.MoonLang",
+        "key": "ctrl+o",
+        "mac": "cmd+o",
+        "when": "editorTextFocus"
+    }]
+}
+}

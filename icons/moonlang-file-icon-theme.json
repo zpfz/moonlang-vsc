@@ -1,0 +1,15 @@
+{
+    "iconDefinitions": {
+        "moon": {
+            "iconPath": "../images/moonlang-icon.png"
+        }
+    },
+    "fileExtensions": {
+        "moon": "moon",
+        "mn": "moon"
+    },
+    "fileNames": {},
+    "languageIds": {
+        "moonlang": "moon"
+    }
+}
