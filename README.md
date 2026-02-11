@@ -1,14 +1,17 @@
-# MoonLang VSCode Extension
+<h2 align="center">MoonLang VSCode Extension</h2>
 
-MoonLang 语言支持扩展，提供语法高亮、智能补全、代码格式化、保存时自动格式化等功能。
+<p align="center">MoonLang 语言支持扩展，提供语法高亮、智能补全、代码格式化、保存时自动格式化等功能。</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" alt="Build Status">
-  <img src="https://img.shields.io/npm/dt/vuepress-theme-antdocs?style=flat-square&color=red" alt="Downloads">
-  <img src="https://img.shields.io/github/package-json/v/zpfz/vuepress-theme-antdocs?style=flat-square" alt="Version">
-  <img src="https://img.shields.io/github/license/zpfz/vuepress-theme-antdocs?style=flat-square" alt="License">
+  <img src="https://img.shields.io/visual-studio-marketplace/d/moonlang-vsc?style=flat-square&color=red" alt="Downloads">
+  <img src="https://img.shields.io/github/package-json/v/zpfz/moonlang-vsc?style=flat-square" alt="Version">
+  <img src="https://img.shields.io/github/license/zpfz/moonlang-vsc?style=flat-square" alt="License">
 </p>
 
+## 更新日志
+
+## v1.9.1
+-[新增] VSCode 侧边栏（资源管理器）、编辑器标题栏快捷命令行：生成exe文件、运行 MoonLang 文件。
 
 
 ## 功能特性
